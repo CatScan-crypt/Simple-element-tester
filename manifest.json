@@ -1,0 +1,30 @@
+{
+  "name": "Web Tester",
+  "description": "Tester Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "webNavigation"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["linkUtils.js", "content.js", "startTest.js"],
+      "type": "module"
+    }
+  ],
+  "action": {
+    "default_popup": "html.html",
+    "default_icon": "png.png"
+  }
+}
+
+
