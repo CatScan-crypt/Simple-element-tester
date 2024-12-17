@@ -5,9 +5,7 @@ const excludeUrls = [
     'https://example.com'  // Add URLs you want to exclude seperated by comma
   ];
   
-  // Function to introduce a delay between fetch requests
-  const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-  
+
   // Function to check if a URL returns a 404 status
  const checkLinkStatus = async (url, element, controller) => {
     // Check if the URL is in the exclude list, and skip it if it is

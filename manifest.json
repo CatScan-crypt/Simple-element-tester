@@ -17,7 +17,7 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["linkUtils.js", "content.js", "startTest.js"],
+      "js": ["fetchLink.js", "content.js", "startTest.js"],
       "type": "module"
     }
   ],

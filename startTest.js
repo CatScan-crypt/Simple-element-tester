@@ -13,6 +13,10 @@ const startTest = () => {
     const links = document.querySelectorAll('a');
     const buttons = document.querySelectorAll('button');
   
+      // Function to introduce a delay between fetch requests
+    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+
     // Add highlight class to each anchor tag and button after 3 seconds
     setTimeout(() => {
       links.forEach(async (link, index) => {
@@ -21,7 +25,7 @@ const startTest = () => {
         try {
           // If the URL is not in the exclude list, introduce a delay before testing
           if (!excludeUrls.includes(link.href)) {
-            await delay(index * 1500);  // Delay the fetch by 1 second per link
+            await delay(index * 1500);  // Delay the fetch by 1.5 seconds per link
           }
   
           // Check if the href returns a 404 and change the highlight color if so
