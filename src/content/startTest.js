@@ -19,19 +19,15 @@ const startTest = () => {
           if (!excludeUrls.includes(link.href)) {
             await delay(index * 1500);  // Delay the fetch by 1.5 seconds per link
           }
-  
           // Check if the href returns a 404 and change the highlight color if so
-          await checkLinkStatus(link.href, link, controller);
+          await checkLinkStatus(link.href, link);
         } catch (error) {
           // Catch any errors and ensure the test continues
           console.error(`Skipping link due to error: ${error}`);
         }
       });
-  
       buttons.forEach(button => {
-        if (testRunning) {
           button.classList.add('highlighted');
-        }
       });
     }, 300); // delay before starting the highlight
   };

@@ -8,7 +8,7 @@
     "webNavigation"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "src/background/background.js"
   },
   "host_permissions": [
     "http://*/*",
@@ -17,13 +17,13 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["fetchLink.js", "content.js", "startTest.js"],
+      "js": ["src/content/fetchLink.js", "src/content/main.js", "src/content/startTest.js"],
       "type": "module"
     }
   ],
   "action": {
-    "default_popup": "html.html",
-    "default_icon": "png.png"
+    "default_popup": "popup/html/html.html",
+    "default_icon": "popup/styles/png.png"
   }
 }
 

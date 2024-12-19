@@ -13,9 +13,7 @@ styleElement.textContent =
   'a.highlighted, button.highlighted { ' + highlightStyle + ' }';
 document.head.appendChild(styleElement);
 
-let testInterval; // Variable to store the test interval
-let testRunning = false; // Flag to check if the test is running
-let controller; 
+
 
 
 // Listen for start and stop test messages from popup
