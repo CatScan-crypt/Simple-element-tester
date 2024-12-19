@@ -1,14 +1,7 @@
 // Start the test
 const startTest = () => {
     console.log("Test started");
-  
-    if (testRunning) return; // Prevent starting a new test if one is already running
-  
-    testRunning = true; // Set test as running
-  
-    // Create an AbortController to allow canceling the fetches
-    controller = new AbortController(); // Create controller here
-  
+    
     // Select all anchor tags and buttons on the page
     const links = document.querySelectorAll('a');
     const buttons = document.querySelectorAll('button');
@@ -20,7 +13,6 @@ const startTest = () => {
     // Add highlight class to each anchor tag and button after 3 seconds
     setTimeout(() => {
       links.forEach(async (link, index) => {
-        if (!testRunning) return; // Check if test is still running
         link.classList.add('highlighted');
         try {
           // If the URL is not in the exclude list, introduce a delay before testing
