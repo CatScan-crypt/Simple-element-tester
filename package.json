@@ -1,0 +1,13 @@
+{
+  "name": "simple-element-tester",
+  "version": "1.0.0",
+  "description": "Simple clickable elements tester",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "python server/server.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
